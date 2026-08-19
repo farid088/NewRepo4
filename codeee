@@ -1,0 +1,155 @@
+#region TAsk1
+int[] massiv = { 5, 4, 6 };
+for(int j=0; j<=massiv.Length-1;j++)
+{
+    int hasil = 1;
+    for(int i=1; i <= massiv[j];i++)
+    {
+        hasil *= 1;
+    }
+    massiv[j] = hasil;
+}
+foreach (int i in massiv) ;
+Console.WriteLine(i);
+#endregion
+#region Task2
+//Ədədlər massivində massivdə olan ən kiçik ədədi çıxardın
+//(məs: { 7, 12, 5, 8} -> { 7, 12, 8})
+int[] massiv = { 7, 12, 5, 8 };
+int min = massiv[0];
+for(int i=0; i<massiv.Length; i++)
+{
+    if (massiv[i]<min)
+    {
+        min = massiv[i];
+    }
+}
+for(int i=0;i<massiv.Length; i++)
+{
+    if (massiv[i]!= min)
+    {
+        Console.WriteLine(massiv[i]);
+    }
+}
+#endregion
+#region Task3
+//Verilmiş stringdə yalnız 1 dəfə işlənmiş ilk simvolu çıxışa ver.
+//(məs: "kərtənkələ" -> 'r')=
+string soz = "kertenkele";
+for(int i=0; i<soz.Length; i++)
+{
+    int count = 0;
+    for(int j=0;j<soz.Length;j++)
+    {
+        if ( soz[i] == soz[j])
+            count++;
+    }
+    if(count==1)
+    {
+        Console.WriteLine(soz[i]);
+        break;
+    }    
+
+}
+#endregion
+#region Task4
+//Verilmiş yazıdan içində boşluqlar olmayan yeni bir yazı düzəltmək 
+string yazi = "s a l a m n e c e s e n";
+string metn = "";
+for (int a=0; a<yazi.Length;a++)
+{
+    if (yazi[a] != ' ')
+    {
+        metn += yazi[a];
+    }
+}
+Console.WriteLine(metn);
+#endregion
+#region TAsk5
+//Verilmiş yazılar siyahısında verilmiş hərfdən neçə ədəd olduğunu tapan proqram
+string herf = "e";
+string[] yazilar = { "salam", "necesen", "elm" };
+int countt = 0;
+for (int b=0;b<yazilar.Length;b++)
+{
+    for(int c = 0; c < yazilar[b].Length; c++)
+    {
+        if (yazilar[b][c].ToString() == herf)
+        {
+            countt++;
+        }
+    }
+}
+Console.WriteLine("Mətndə olan " + herf + " hərflərinin sayısı: " + countt);
+#endregion
+#region Task6
+int eded1 = 10;
+int eded2 = 5;
+string simvol = Console.ReadLine();
+while (simvol != "+" && simvol != "-" && simvol != "*" && simvol != "/")
+{
+    simvol = Console.ReadLine();
+}
+if (simvol == "*")
+{
+    Console.WriteLine(eded1 * eded2);
+}
+else if (simvol == "+")
+{
+    Console.WriteLine(eded1 + eded2);
+}
+else if (simvol == "-")
+{
+    Console.WriteLine(eded1 - eded2);
+}
+else 
+{
+    Console.WriteLine(eded1 / eded2);
+}
+#endregion
+#region TAsk7
+//Verilmiş yazının içində A hərfinin olub olmadığını tapan proqram
+string yazii = "alma";
+string herff = "a";
+int d = 0;
+while (d<yazii.Length)
+{
+    if(yazii[d].ToString()==herff)
+    {
+        Console.WriteLine("herf var" );
+        break;
+    }
+    else
+    {
+        Console.WriteLine("herf yoxdur");
+        break;
+    }
+}
+#endregion
+#region tAsk8
+//Verilmiş yazıda neçə A hərfinin olduğunu tapan proqram
+string yazzi = "SALAM";
+string hherff = "A";
+int couunt = 0;
+int f = 0;
+while (f < yazzi.Length)
+{
+    if (yazzi[f].ToString() == hherff)
+    {
+        couunt++;
+    }
+    f++;
+}
+Console.WriteLine(couunt);
+#endregion
+#region Task9
+//Verilmiş müsbət cüt ədədi kvadtarına yüksəldən proqram.
+//Daxil edilən ədə musbət və cüt olmadıqca yenidən daxil edilməlidir
+Console.Write("Bir ədəd daxil edin: ");
+int eded = Convert.ToInt32(Console.ReadLine());
+while(eded%2!=0 || eded<=0)
+{
+    eded = Convert.ToInt32(Console.ReadLine()); 
+}
+Console.WriteLine(eded * eded);
+#endregion
